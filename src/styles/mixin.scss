@@ -1,0 +1,33 @@
+/**
+ * 用 @mixin 可以定义一个Mixin模块，内部可以包含任意想要复用的样式
+ * 通过 @include 可以引入我们定义的 mixin 模块
+ * 比如 在Layout.vue 中 通过
+ * @include clearfix 引入了可复用的clearfix样式集合  
+ */
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin scroollBar {
+    &::-webkit-scrollbar-track-piece {
+        background: #d3dced;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: #99a9bf;
+        border-radius: 20px;
+    }
+}
+
+@mixin relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
