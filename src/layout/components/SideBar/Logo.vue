@@ -25,7 +25,7 @@ export default {
     data () {
         return {
             title: 'Vue Cesium Demo',
-            logo: ''   
+            logo: '@/icons/logo.png'   
         }
     }
 
